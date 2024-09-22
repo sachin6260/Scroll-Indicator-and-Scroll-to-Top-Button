@@ -1,0 +1,152 @@
+.scroll-indicator-container {
+    position: fixed;
+    top: 50px; /* Place it below the navbar */
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 98; /* Lower z-index than the navbar to keep it below */
+  }
+  
+  .scroll-indicator {
+    height: 100%;
+    background-color: #4caf50;
+    width: 0%;
+    transition: width 0.25s ease;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    z-index: 99;
+    text-align: center;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  .navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .navbar ul li.active a {
+    color: #4caf50;
+  }
+  
+  .navbar ul li a:hover {
+    color: #4caf50;
+  }
+/* Scroll-to-Top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px; /* Button size */
+    height: 60px; /* Button size */
+    background-color: #4caf50; /* Green color */
+    color: white;
+    border: none;
+    border-radius: 50%; /* Makes it circular */
+    cursor: pointer;
+    font-size: 24px; /* Icon or text size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 101;
+    overflow: hidden; /* To contain the ripple */
+    transition: background-color 0.3s; /* Smooth background color transition */
+    animation: slide-in 0.5s forwards, pulse 2s infinite; /* Slide-in and pulse animations */
+    opacity: 0; /* Start invisible */
+}
+
+/* Hover effect */
+.scroll-to-top:hover {
+    background-color: #45a049; /* Darker shade on hover */
+}
+
+/* Slide-In Animation */
+@keyframes slide-in {
+    from {
+        transform: translateY(100px); /* Start off the screen */
+        opacity: 0; /* Invisible at start */
+    }
+    to {
+        transform: translateY(0); /* Slide to final position */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.1); /* Scale up */
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+ 
+
+ 
+  
+  /* Content Section Styles */
+  .content {
+    margin-top: 70px; /* Extra space to account for the navbar height */
+    padding: 20px;
+  }
+  
+  section {
+    margin: 50px 0;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  blockquote {
+    font-style: italic;
+    margin: 10px 0;
+    padding: 10px;
+    border-left: 4px solid #4caf50;
+    background: #f9f9f9;
+  }
+  
+  ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  li {
+    margin: 5px 0;
+  }
+  
